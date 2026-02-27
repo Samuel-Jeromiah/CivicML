@@ -1,7 +1,5 @@
 fastapi>=0.100.0
 pydantic
-numpy
+numpy<2.0.0
 scikit-learn
-pandas
 joblib
-uvicorn
