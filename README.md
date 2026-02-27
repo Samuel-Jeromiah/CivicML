@@ -3,6 +3,8 @@
 ## Overview
 CivicML is a machine learning web application that analyzes legislative bills from the State of Maine. It uses a custom-trained machine learning model (Logistic Regression) built on top of text embeddings to predict which legislative committee a bill belongs to, based on its title and text contents.
 
+🌍 **[Live Demo: civic-ml.vercel.app](https://civic-cmyew6k1i-samuel-gnanams-projects.vercel.app/)**
+
 ## Features
 - **Predictive Modeling:** Implements a text classification pipeline to categorize legislative documents.
 - **Serverless API:** Uses a FastAPI backend designed to run on Vercel serverless functions, serving model inferences quickly and efficiently.
