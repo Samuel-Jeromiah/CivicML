@@ -72,8 +72,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
 }
 
 .container {
@@ -153,10 +158,12 @@ header {
 .bill-list::-webkit-scrollbar {
     width: 6px;
 }
+
 .bill-list::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+
 .bill-list::-webkit-scrollbar-thumb {
     background: var(--glass-border);
     border-radius: 10px;
@@ -174,7 +181,7 @@ header {
 .bill-item:hover {
     background: var(--card-hover);
     transform: translateY(-2px);
-    border-color: rgba(255,255,255,0.2);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .bill-item.selected {
@@ -189,7 +196,7 @@ header {
 }
 
 .ld-badge {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2px 8px;
     border-radius: 12px;
     font-size: 0.75rem;
@@ -255,7 +262,7 @@ header {
 }
 
 .text-snippet {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -263,6 +270,8 @@ header {
     line-height: 1.6;
     color: #cbd5e1;
     border-left: 3px solid var(--accent-secondary);
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .meta-info {
@@ -317,11 +326,11 @@ header {
 }
 
 .prediction-card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(16, 185, 129, 0.3);
     border-radius: 16px;
     padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -371,7 +380,7 @@ header {
 .progress-bar {
     width: 100%;
     height: 8px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -403,19 +412,32 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
     .app-layout {
         grid-template-columns: 1fr;
     }
+
     .selection-pane {
         border-right: none;
         border-bottom: 1px solid var(--glass-border);

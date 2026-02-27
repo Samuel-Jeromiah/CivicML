@@ -62,9 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         analyzeBtn.disabled = false;
         analyzeBtn.innerHTML = 'Analyze Bill <span class="icon">✨</span>';
+
+        // Auto-analyze immediately to reduce clicks and scrolling
+        analyzeSelectedBill();
     }
 
-    analyzeBtn.addEventListener('click', async () => {
+    async function analyzeSelectedBill() {
         if (!selectedBill) return;
 
         // UI Loading state
@@ -98,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             analyzeBtn.disabled = false;
             analyzeBtn.innerHTML = 'Analyze Bill <span class="icon">✨</span>';
         }
-    });
+    }
 
     function showPrediction(result) {
         analyzeBtn.innerHTML = 'Analysis Complete <span class="icon">✅</span>';
