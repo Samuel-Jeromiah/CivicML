@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicML | AI Legislative Insights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">Civic<span>ML</span></div>
+            <p class="subtitle">Maine Legislative Insights powered by Machine Learning</p>
+        </header>
+
+        <main>
+            <div class="glass-panel app-layout">
+                <div class="selection-pane">
+                    <h2>Select a Bill</h2>
+                    <p class="instruction">Choose from recent Maine legislation to analyze.</p>
+                    <div id="bill-list" class="bill-list">
+                        <div class="loader">Loading bills...</div>
+                    </div>
+                </div>
+
+                <div class="analysis-pane">
+                    <div id="empty-state" class="empty-state">
+                        <div class="icon-placeholder">📄</div>
+                        <p>Select a bill from the list to begin analysis.</p>
+                    </div>
+
+                    <div id="selected-bill" class="bill-details hidden">
+                        <span class="tag" id="bill-id">LD #</span>
+                        <h2 id="bill-title">Bill Title</h2>
+                        <div class="text-snippet">
+                            <p id="bill-text">Snippet here...</p>
+                        </div>
+                        <div class="meta-info">
+                            <strong>Actual Committee:</strong> <span id="actual-committee">Unknown</span>
+                        </div>
+                        
+                        <button id="analyze-btn" class="primary-btn">Analyze Bill <span class="icon">✨</span></button>
+                    </div>
+
+                    <div id="result-container" class="result-container hidden">
+                        <h3>AI Prediction</h3>
+                        <div class="prediction-card">
+                            <div class="prediction-header">
+                                <span class="label">Predicted Committee</span>
+                            </div>
+                            <div id="prediction-result" class="prediction-value">Housing and Economic Development</div>
+                            
+                            <div class="confidence-bar-container">
+                                <span class="label">Confidence Score</span>
+                                <div class="progress-bar">
+                                    <div id="confidence-fill" class="progress-fill"></div>
+                                </div>
+                                <span id="confidence-text" class="confidence-text">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Built for the MS AI CS6140 Portfolio</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
